@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active-eval {
+    background-color: #004080;
+    color: white;
+}
