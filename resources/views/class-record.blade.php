@@ -9,7 +9,7 @@
                 </div> --}}
                 <form action="" class="w-full">
                     {{-- Evaluations --}}
-                    <x-evaluations />
+                    <x-evaluations :evaluations="$evaluations" />
     
                     <div class="eval-container">
                         <x-written-works />

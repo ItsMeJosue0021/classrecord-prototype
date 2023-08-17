@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class EvaluationCriteriaSeeder extends Seeder
 {
@@ -12,6 +13,22 @@ class EvaluationCriteriaSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('evaluation_criterias')->insert(
+            [
+                'name' => 'Written Works',
+            ]
+        );
+
+        DB::table('evaluation_criterias')->insert(
+            [
+                'name' => 'Performance Tasks',
+            ]
+        );
+
+        DB::table('evaluation_criterias')->insert(
+            [
+                'name' => 'Quarterly Assessments',
+            ]
+        );
     }
 }

@@ -6,12 +6,12 @@ use App\Models\EvaluationCriteria;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Activity extends Model
+class ClassRecord extends Model
 {
     use HasFactory;
 
-    public function evaluationCriteria()
+    public function evaluationCriterias()
     {
-        return $this->belongsTo(EvaluationCriteria::class);
+        return $this->hasMany(EvaluationCriteria::class);
     }
 }

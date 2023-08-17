@@ -18,7 +18,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="">
         {{$slot}}
     </main>
     
