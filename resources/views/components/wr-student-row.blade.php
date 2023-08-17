@@ -5,7 +5,7 @@
             {{-- <p class="poppins text-sm">{{$student->last_name}},</p>
             <p class="poppins text-sm">{{$student->first_name}}</p>
             <p class="poppins text-sm">{{ substr($student->middle_name, 0, 1) }}.</p> --}}
-            <p class="poppins text-sm">Salceda, Joshua C.</p>
+            <p class="poppins text-sm">{{$student->name}}</p>
         </div>
     </div>
         {{-- activities --}}
@@ -13,12 +13,9 @@
         <div class="flex overflow-hidden"> 
             {{-- loop the table activities for each students --}}     
 
-            <x-wr-student-grade />
-            <x-wr-student-grade />
-            <x-wr-student-grade />
-            <x-wr-student-grade />
-            <x-wr-student-grade />
-            <x-wr-student-grade />
+            @foreach ($activities as $activity)
+                <x-wr-student-grade :Activity="$activity" />
+            @endforeach
             
             {{--  --}}
             

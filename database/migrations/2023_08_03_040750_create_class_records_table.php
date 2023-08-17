@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('class_records', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            // $table->foreignId('section_subject_id')->constrained('section_subjects')->onDelete('cascade')->nullable(); //reserved for future use
+            // $table->foreignId('faculty_id')->constrained('faculties')->onDelete('cascade')->nullable(); //reserved for future use
+            // $table->foreignId('school_year_id')->constrained('school_years')->onDelete('cascade')->nullable(); //reserved for future use
             $table->timestamps();
         });
     }

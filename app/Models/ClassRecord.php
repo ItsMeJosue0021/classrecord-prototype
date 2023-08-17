@@ -10,6 +10,12 @@ class ClassRecord extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'section_subject_id',
+        'faculty_id',
+        'school_year_id'
+    ];
+
     public function evaluationCriterias()
     {
         return $this->hasMany(EvaluationCriteria::class);

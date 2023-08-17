@@ -11,13 +11,9 @@
             
             <div class="w-3/4 flex justify-between border-gray-400">
                 <div class="flex">
-                    {{-- loop the table activity and show the max score each --}}
-                    <x-wr-activity-number />
-                    <x-wr-activity-number />
-                    <x-wr-activity-number />
-                    <x-wr-activity-number />
-                    <x-wr-activity-number />
-                    <x-wr-activity-number />
+                    @foreach ($activities as $index => $activity)
+                        <x-wr-activity-number :number="$index + 1"/>
+                    @endforeach
                 </div>
 
                 <div class="flex">
@@ -42,13 +38,9 @@
             </div>
             <div class="w-3/4 flex justify-between">
                 <div class="flex">
-                    {{-- loop the table activity and show the max score each --}}
-                    <x-wr-highest-possible-score />
-                    <x-wr-highest-possible-score />
-                    <x-wr-highest-possible-score />
-                    <x-wr-highest-possible-score />
-                    <x-wr-highest-possible-score />
-                    <x-wr-highest-possible-score />
+                    @foreach ($activities as $activity)
+                        <x-wr-highest-possible-score :activity="$activity" />
+                    @endforeach
                 </div>
 
                 <div class="flex">
@@ -67,19 +59,9 @@
 
         {{-- row 4 --}}
         <div>                       
-            {{-- @foreach ($students as $student) --}}          
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            <x-wr-student-row />
-            {{-- @endfor --}}
-            {{-- @endforeach --}}
+            @foreach ($students as $student)          
+                <x-wr-student-row :student="$student" :activities="$activities"/>
+            @endforeach
         </div>
     </div>
 

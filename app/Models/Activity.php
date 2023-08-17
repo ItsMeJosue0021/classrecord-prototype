@@ -10,6 +10,14 @@ class Activity extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'max_score',
+        'evaluation_criteria_id',
+        'class_record_id',
+        'subject_id',
+    ];
+
     public function evaluationCriteria()
     {
         return $this->belongsTo(EvaluationCriteria::class);

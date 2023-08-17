@@ -21,6 +21,8 @@
     <main class="">
         {{$slot}}
     </main>
+
+    <x-flash-messages />
     
 </body>
 </html>

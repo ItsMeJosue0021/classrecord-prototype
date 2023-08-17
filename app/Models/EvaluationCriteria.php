@@ -18,4 +18,5 @@ class EvaluationCriteria extends Model
     {
         return $this->hasMany(Activity::class);
     }
+
 }
