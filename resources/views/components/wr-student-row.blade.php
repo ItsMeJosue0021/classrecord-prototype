@@ -14,7 +14,7 @@
             {{-- loop the table activities for each students --}}     
 
             @foreach ($activities as $activity)
-                <x-wr-student-grade :Activity="$activity" />
+                <x-wr-student-grade :activity="$activity" :student="$student"/>
             @endforeach
             
             {{--  --}}

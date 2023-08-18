@@ -7,17 +7,19 @@
                         <p class="poppins text-base text-gray-600 group-hover:text-red-700">back</p>
                     </a>
                 </div> --}}
-                <form action="" class="w-full">
-                    {{-- Evaluations --}}
-                    <x-evaluations :evaluations="$evaluations" />
-    
-                    <div class="eval-container">
-                        <x-written-works :students="$students" :activities="$wr_activities"/>
-                        <x-performance-task />
-                        <x-quarterly-assessment />
-                        <x-final-grade />   
+                {{-- <form action="" class="w-full"> --}}
+                    <div class="w-full">
+                        {{-- Evaluations --}}
+                        <x-evaluations :evaluations="$evaluations" />
+        
+                        <div class="eval-container">
+                            <x-written-works :students="$students" :activities="$wr_activities"/>
+                            <x-performance-task />
+                            <x-quarterly-assessment />
+                            <x-final-grade />   
+                        </div>
                     </div>
-                </form>
+                {{-- </form> --}}
             </div>
     
             <div id="written-modal" class="hidden">

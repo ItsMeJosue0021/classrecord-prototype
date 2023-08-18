@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\ClassRecordController;
+use App\Http\Controllers\ScoreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ClassRecordController::class, 'index'])->name('home');
 
 Route::post('/create-activity', [ActivityController::class, 'store'])->name('activity.store');
+
+Route::post('/submit-scores', [ScoreController::class, 'store'])->name('score.store');
